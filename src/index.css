@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #1e3a8a;
+  --primary-light: #3b82f6;
+  --secondary: #0f766e;
+  --secondary-light: #2dd4bf;
+  --accent: #f97066;
+  --success: #059669;
+  --warning: #d97706;
+  --error: #dc2626;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  @apply bg-slate-50 text-slate-800;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-semibold;
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-opacity-50;
+  }
+
+  .btn-primary {
+    @apply btn bg-blue-900 text-white hover:bg-blue-800 focus:ring-blue-300;
+  }
+
+  .btn-secondary {
+    @apply btn bg-teal-700 text-white hover:bg-teal-600 focus:ring-teal-300;
+  }
+
+  .btn-accent {
+    @apply btn bg-red-500 text-white hover:bg-red-400 focus:ring-red-300;
+  }
+
+  .btn-outline {
+    @apply btn border-2 border-blue-900 text-blue-900 hover:bg-blue-900 hover:text-white focus:ring-blue-300;
+  }
+
+  .btn-success {
+    @apply btn bg-emerald-600 text-white hover:bg-emerald-500 focus:ring-emerald-300;
+  }
+
+  .btn-danger {
+    @apply btn bg-red-600 text-white hover:bg-red-500 focus:ring-red-300;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-md p-6 transition-all duration-300;
+  }
+
+  .input {
+    @apply w-full px-4 py-2 rounded-lg border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-200;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-slate-700 mb-1;
+  }
+
+  .form-group {
+    @apply mb-4;
+  }
+
+  .page-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8;
+  }
+
+  .dashboard-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+  }
+
+  .transaction-item {
+    @apply flex items-center justify-between py-3 border-b border-slate-200 last:border-b-0;
+  }
+
+  .icon-btn {
+    @apply p-2 rounded-full hover:bg-slate-100 transition-colors duration-200;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-pulse-subtle {
+    animation: pulsate 2s infinite ease-in-out;
+  }
+
+  @keyframes pulsate {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .slide-in {
+    animation: slideIn 0.3s ease-out forwards;
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateX(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+}
