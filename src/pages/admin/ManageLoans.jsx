@@ -167,7 +167,7 @@ const ManageLoans = () => {
                         Loan
                       </h3>
                       <p className='text-sm text-slate-600'>
-                        By {loan.userId.fullName}
+                        By {loan.fullName}
                       </p>
                     </div>
                   </div>
